@@ -1,1 +1,3 @@
-docker-container/airflow/data/
+docker-container/airflow/data/*
+
+docker-container/postgres_accidents_datasets/UK_accidents_postgres/base
