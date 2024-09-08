@@ -1,0 +1,17 @@
+services:
+  UK_accidents_postgres:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=UK_accidents
+    volumes:
+      - "./UK_accidents_postgres:/var/lib/postgresql/data:rw"
+    ports:
+      - "5432:5432"
+    networks:
+      - airflow
+networks:
+  airflow:
+    external:
+      name: project_default
